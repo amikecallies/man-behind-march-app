@@ -1,0 +1,28 @@
+/* =================================================================== */
+/* Purple #6957af
+====================================================================== */
+.hero-section .btn-primary,
+.hero-section .btn-primary:hover,
+.hero-section .btn-primary:active,
+.hero-section .btn-primary:focus,
+.hero-section .btn-primary:not(:disabled):not(.disabled):active,
+.benefits-section .item-icon {
+    color: #6957af;
+}
+
+.btn-primary,
+.btn-primary:hover,.btn-primary:active,.btn-primary:focus,.btn-primary:not(:disabled):not(.disabled):active,
+.hero-section,
+.form-section .btn-subscribe.is-active,
+.reviews-section .icon-holder,
+.author-section {
+    background: #6957af;
+}
+
+.bottom-separator path {
+    fill: #6957af;
+}
+
+.form-control:focus {
+    border: 1px solid #6957af;
+}

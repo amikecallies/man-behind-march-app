@@ -1,0 +1,28 @@
+/* =================================================================== */
+/* Red #f72b1c
+====================================================================== */
+.hero-section .btn-primary,
+.hero-section .btn-primary:hover,
+.hero-section .btn-primary:active,
+.hero-section .btn-primary:focus,
+.hero-section .btn-primary:not(:disabled):not(.disabled):active,
+.benefits-section .item-icon {
+    color: #f72b1c;
+}
+
+.btn-primary,
+.btn-primary:hover,.btn-primary:active,.btn-primary:focus,.btn-primary:not(:disabled):not(.disabled):active,
+.hero-section,
+.form-section .btn-subscribe.is-active,
+.reviews-section .icon-holder,
+.author-section {
+    background: #f72b1c;
+}
+
+.bottom-separator path {
+    fill: #f72b1c;
+}
+
+.form-control:focus {
+    border: 1px solid #f72b1c;
+}

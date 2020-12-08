@@ -1,0 +1,28 @@
+/* =================================================================== */
+/* Blueviolet #4169e1
+====================================================================== */
+.hero-section .btn-primary,
+.hero-section .btn-primary:hover,
+.hero-section .btn-primary:active,
+.hero-section .btn-primary:focus,
+.hero-section .btn-primary:not(:disabled):not(.disabled):active,
+.benefits-section .item-icon {
+    color: #4169e1;
+}
+
+.btn-primary,
+.btn-primary:hover,.btn-primary:active,.btn-primary:focus,.btn-primary:not(:disabled):not(.disabled):active,
+.hero-section,
+.form-section .btn-subscribe.is-active,
+.reviews-section .icon-holder,
+.author-section {
+    background: #4169e1;
+}
+
+.bottom-separator path {
+    fill: #4169e1;
+}
+
+.form-control:focus {
+    border: 1px solid #4169e1;
+}
