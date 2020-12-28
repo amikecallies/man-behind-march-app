@@ -1,7 +1,0 @@
-Paypal
-VISA
-MasterCard
-American Express
-
-Apple Pay
-Google Pay
