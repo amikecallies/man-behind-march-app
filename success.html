@@ -1,14 +1,59 @@
-<html>
+<!DOCTYPE html>
+<html lang="en"> 
 <head>
-  <title>Thanks for your order!</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+
+    <title>The Man | Behind | The March</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+	<!-- Template CSS Files -->
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- CSS Skin File -->
+	<link rel="stylesheet" href="assets/css/skins/red.css">
+
+</head> 
+
 <body>
-  <section>
-    <p>
-      We appreciate your business! If you have any questions, please email
-      <a href="mailto:orders@example.com">orders@example.com</a>.
-    </p>
-  </section>
+	<!-- Preloader Starts -->
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
+	<!-- Preloader Ends -->
+    <section id="author-section" class="author-section section">
+	    <div class="container py-3">
+		    <div class="author-profile text-center mb-5">
+			    <img class="author-pic" src="assets/images/author.jpg" alt="image" >
+		    </div>
+		    <h2 class="section-heading text-center text-white mb-3">Your order has been succesfully submitted!</h2>
+		    <div class="author-bio single-col-max mx-auto">
+				<center><p>Arlington R. Callies will process and deliver your order within 3-5 business days from today! Please call for any questions: 210-262-3535.
+				</p></center>
+			    <div class="author-links text-center pt-4">
+			        <h5 class="text-white mb-4">Follow Me</h5>
+				    <ul class="social-list list-unstyled">
+					    <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+					    <li class="list-inline-item"><a href="#"><i class="fa fa-behance"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+			        </ul>
+			    </div>
+		    </div>
+      </div>
+      <center><div class="text-center"><a href="index.html" class="btn btn-primary">Home</a></div></center>
+    </section>
 </body>
+	<!-- Template JS Files -->
+  <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+  <script src="assets/plugins/popper.min.js"></script>
+  <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+  <script src="assets/plugins/jquery.scrollTo.min.js"></script>  
+  <script src="assets/plugins/back-to-top.js"></script>
+  <script src="assets/js/custom.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
 </html>

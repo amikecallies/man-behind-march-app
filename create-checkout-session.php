@@ -7,7 +7,7 @@ session_start();
 
 header('Content-Type: application/json');
 
-//$YOUR_DOMAIN = 'http://localhost:5500/'; // CHANGE
+$YOUR_DOMAIN = 'https://man-behind-march-app.herokuapp.com'; // Production: https://manbehindthemarch.com
 
 $o_fullName=$_SESSION['fullName'];
 $o_email=$_SESSION['email'];
@@ -115,8 +115,8 @@ $checkout_session = \Stripe\Checkout\Session::create([
     'quantity' => $o_bookqty,
   ]],
   'mode' => 'payment',
-  'success_url' => 'https://man-behind-march-app.herokuapp.com/index.html',
-  'cancel_url' => 'https://man-behind-march-app.herokuapp.com/index.html',
+  'success_url' => $YOUR_DOMAIN . '/success.html',
+  'cancel_url' => $YOUR_DOMAIN . '/index.html',
 ]);
 
 echo json_encode(['id' => $checkout_session->id]);
