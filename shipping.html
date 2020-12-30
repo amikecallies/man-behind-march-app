@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+
+    <title>The Man | Behind | The March</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+	<!-- Template CSS Files -->
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- CSS Skin File -->
+	<link rel="stylesheet" href="assets/css/skins/red.css">
+
+</head> 
+
+<body>
+    
+    <!-- Author Section Ends -->
+	<!-- Modal Checkout Starts -->
+        <div class="modal-content py-4">
+            <div class="container">
+                <div class="row p-3 p-sm-5">
+                    <div class="col-lg-6 col-12">
+                        <figure class='book mx-auto'>
+                            <ul class='hardcover_front list-unstyled'>
+                                <li>
+                                    <div class="coverDesign">
+                                <img src="assets/images/book-cover.jpg" class="img-fluid" alt="cover">
+                                    </div>
+                                </li>
+                                <li></li>
+                            </ul>
+                            <ul class='page'>
+                                <li></li>
+                                <li>
+                            <span>
+                            <img src="assets/images/author.jpg" class="img-fluid" alt="author" />
+                            <span> A book by
+                            <br>
+                            John Smith</span>
+                                </span>
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class='hardcover_back list-unstyled'>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class='book_spine list-unstyled'>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </figure>
+                        <h3 class="product text-center mt-5 mb-5 mb-lg-0 text-capitalize">THE MAN <br>BEHIND<br>THE MARCH</h3>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="row">
+                            <p class="pb-3 text-uppercase">Please enter your shipping adddress purchase</p>
+                        </div>
+                        <div class="row">
+                            <form method="POST" action="notificationInfo.php" class="w-100">
+                                <div class="form-group">
+                                    <div class="form-group"> <input type="text" name="fullName" class="form-control" placeholder="FULL NAME" required></div>
+                                    <div class="form-group"> <input type="text" name="email" class="form-control" placeholder="EMAIL" required> </div>
+                                    <div class="form-group"> <input type="text" name="country" class="form-control" placeholder="COUNTRY" required> </div>
+                                    <div class="form-group"> <input type="text" name="address" class="form-control" placeholder="STREET ADDRESS" required> </div>
+                                    <div class="form-group"> <input type="text" name="suite" class="form-control" placeholder="APT/SUITE (OPTIONAL)"> </div>
+                                    <div class="form-group"> <input type="text" name="city" class="form-control" placeholder="CITY" required> </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 email-field"> <input type="text" name="state" class="form-control" placeholder="STATE" required> </div>
+                                        <div class="col-12 col-md-6 cardholder-field"> <input type="text" name="zipcode" class="form-control" placeholder="ZIPCODE" required> </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 email-field"> <input type="text" name="phone" class="form-control" placeholder="PHONE" required> </div>
+                                        <div class="col-12 col-md-6 email-field"> <input type="number" min="1" max="50" name="bookQty" class="form-control" placeholder="BOOK QTY" required> </div>
+                                    </div>
+                                </div>
+                                </div><button type="submit" class="btn btn-primary mb-3 d-block w-100"><span class="d-none d-md-block">Proceed to Checkout</span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <center><div class="text-center"><a href="index.html" class="btn btn-primary">Cancel</a></div></center>
+        </div>
+    <!-- Modal Checkout Ends -->
+    	<!-- Template JS Files -->
+        <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="assets/plugins/popper.min.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+        <script src="assets/plugins/jquery.scrollTo.min.js"></script>  
+        <script src="assets/plugins/back-to-top.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
+    </body>
+    </html>

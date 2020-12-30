@@ -19,3 +19,7 @@ php -S 127.0.0.1:4242
 3. Go to [http://localhost:4242/checkout.html](http://localhost:4242/checkout.html)
 
 4. [Documentation] (https://stripe.com/docs/checkout/integration-builder)
+
+5. [Refunds] (https://stripe.com/docs/refunds)
+
+6. [Traditional-Fulfillment] (https://stripe.com/docs/payments/checkout/fulfill-orders)

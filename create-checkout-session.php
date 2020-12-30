@@ -1,28 +1,125 @@
 <?php
-
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
+session_start();
 \Stripe\Stripe::setApiKey('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'); // Secret Key
 
 header('Content-Type: application/json');
 
-$YOUR_DOMAIN = 'http://localhost:5500/';
+//$YOUR_DOMAIN = 'http://localhost:5500/'; // CHANGE
+
+$o_fullName=$_SESSION['fullName'];
+$o_email=$_SESSION['email'];
+$o_country=$_SESSION['country'];
+$o_address=$_SESSION['address'];
+$o_suite=$_SESSION['suite'];
+$o_city=$_SESSION['city'];
+$o_state=$_SESSION['state'];
+$o_zipcdoe=$_SESSION['zipcode'];
+$o_phone=$_SESSION['phone'];
+$o_bookqty=$_SESSION['bookQty'];
+
+if($o_suite == '') {
+  $o_suite = 'N/A';
+}
+
+function sendMsgSeller($o_fullName, $o_email, $o_country, $o_address, $o_suite, $o_city, $o_state, $o_zipcdoe, $o_phone, $o_bookqty) {
+
+  // Instantiate a new PHPMailer 
+  $mail = new PHPMailer;
+
+  // Tell PHPMailer to use SMTP
+  $mail->isSMTP();
+
+  //$mail->SMTPDebug = 2;
+
+  // Replace sender@example.com with your "From" address. 
+  // This address must be verified with Amazon SES.
+  $mail->setFrom('acallies15@apu.edu', 'New Home Realty  Admin');
+  // Replace recipient@example.com with a "To" address. If your account 
+  // is still in the sandbox, this address must be verified.
+
+
+  //$mail->addAddress('amcallies2018@gmail.com', 'Adrian Callies'); //Use this email only for testing this feature
+  $mail->addAddress('Arcallies@aol.com', 'Arlington Callies');
+
+  // Replace smtp_username with your Amazon SES SMTP user name.
+  $mail->Username = 'AKIA4HJMF54KR6RMZO7G';
+
+  // Replace smtp_password with your Amazon SES SMTP password.
+  $mail->Password = 'BIaPiubigPTFVZS6+vl90lygXYC4pn8XrkT++DfgaSkI';
+      
+  // Specify a configuration set. If you do not want to use a configuration
+  // set, comment or remove the next line.
+  //$mail->addCustomHeader('X-SES-CONFIGURATION-SET', 'ConfigSet');
+  
+  // If you're using Amazon SES in a region other than US West (Oregon), 
+  // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP  
+  // endpoint in the appropriate region.
+  $mail->Host = 'email-smtp.us-west-2.amazonaws.com';// May be subject to change since most emails will be sent in the Texas Area
+
+  // The subject line of the email
+  $mail->Subject = 'Man Behind the March: New Order!';
+
+  // The HTML-formatted body of the email
+  $mail->Body = "<h1>Someone has just made a new order for your book! Please ship and fulfill this order!</h1>
+  <p>".$o_fullName." has made this purchase. Please review the shipping information below:</p>
+  <i><ol>
+  <li>Email: ".$o_email."</li>
+  <li>Country: ".$o_country."</li>
+  <li>Address: ".$o_address."</li>
+  <li>Suite: ".$o_suite."</li>
+  <li>City: ".$o_city."</li>
+  <li>State: ".$o_state."</li>
+  <li>Zip Code: ".$o_zipcdoe."</li>
+  <li>Phone: ".$o_phone."</li>
+  <li>Number of Books: ".$o_bookqty."</li>
+  </ol>
+  <b>Please deliver this order to ".$o_fullName." at your earliest convenience.</b>";
+
+  // Tells PHPMailer to use SMTP authentication
+  $mail->SMTPAuth = true;
+
+  // Enable TLS encryption over port 587
+  $mail->SMTPSecure = 'tls';
+  $mail->Port = 587;
+
+  // Tells PHPMailer to send HTML-formatted email
+  $mail->isHTML(true);
+
+  // The alternative email body; this is only displayed when a recipient
+  // opens the email in a non-HTML email client. The \r\n represents a 
+  // line break.
+  $mail->AltBody = "Email Test\r\nThis email was sent through the 
+      Amazon SES SMTP interface using the PHPMailer class.";
+
+
+  if(!$mail->send()) {
+      echo "Email not sent. " , $mail->ErrorInfo , PHP_EOL;
+  }
+
+}
 
 $checkout_session = \Stripe\Checkout\Session::create([
   'payment_method_types' => ['card'],
   'line_items' => [[
     'price_data' => [
       'currency' => 'usd',
-      'unit_amount' => 100,
+      'unit_amount' => 25,
       'product_data' => [
         'name' => 'Man Beind the March Book',
         'images' => ["https://i.imgur.com/IunDNun.jpg"],
       ],
     ],
-    'quantity' => 1,
+    'quantity' => $o_bookqty,
   ]],
   'mode' => 'payment',
-  'success_url' => $YOUR_DOMAIN . '/success.html',
-  'cancel_url' => 'https://man-behind-march-app.herokuapp.com/',
+  'success_url' => 'https://man-behind-march-app.herokuapp.com/index.html',
+  'cancel_url' => 'https://man-behind-march-app.herokuapp.com/index.html',
 ]);
 
 echo json_encode(['id' => $checkout_session->id]);
+sendMsgSeller($o_fullName, $o_email, $o_country, $o_address, $o_suite, $o_city, $o_state, $o_zipcdoe, $o_phone, $o_bookqty);
+session_destroy();
+?>
