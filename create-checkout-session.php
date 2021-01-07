@@ -19,9 +19,25 @@ $o_state=$_SESSION['state'];
 $o_zipcdoe=$_SESSION['zipcode'];
 $o_phone=$_SESSION['phone'];
 $o_bookqty=$_SESSION['bookQty'];
+$o_booktype=$_SESSION['booktype'];
+$o_hardCoverPrice=1299;
+$o_softCoverPrice=999;
+$o_price= 0;
 
-if($o_suite == '') {
+if($o_suite == '') 
+{
   $o_suite = 'N/A';
+}
+
+if($o_booktype == 'hardcover') 
+{
+
+  $o_price = $o_hardCoverPrice;
+
+}
+else 
+{
+  $o_price = $o_softCoverPrice;
 }
 
 function sendMsgSeller($o_fullName, $o_email, $o_country, $o_address, $o_suite, $o_city, $o_state, $o_zipcdoe, $o_phone, $o_bookqty) {
@@ -106,7 +122,7 @@ $checkout_session = \Stripe\Checkout\Session::create([
   'line_items' => [[
     'price_data' => [
       'currency' => 'usd',
-      'unit_amount' => 25,
+      'unit_amount' => $o_price,
       'product_data' => [
         'name' => 'Man Beind the March Book',
         'images' => ["https://i.imgur.com/IunDNun.jpg"],

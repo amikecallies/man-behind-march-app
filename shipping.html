@@ -71,18 +71,39 @@
                                     <div class="form-group"> <input type="text" name="country" class="form-control" placeholder="COUNTRY" required> </div>
                                     <div class="form-group"> <input type="text" name="address" class="form-control" placeholder="STREET ADDRESS" required> </div>
                                     <div class="form-group"> <input type="text" name="suite" class="form-control" placeholder="APT/SUITE (OPTIONAL)"> </div>
-                                    <div class="form-group"> <input type="text" name="city" class="form-control" placeholder="CITY" required> </div>
+                                    <div class="form-group"> <input type="text" name="company" class="form-control" placeholder="COMPANY NAME (OPTIONAL)"> </div>
                                     <div class="row">
                                         <div class="col-12 col-md-6 email-field"> <input type="text" name="state" class="form-control" placeholder="STATE" required> </div>
                                         <div class="col-12 col-md-6 cardholder-field"> <input type="text" name="zipcode" class="form-control" placeholder="ZIPCODE" required> </div>
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-12 col-md-6 email-field"> <input type="text" name="phone" class="form-control" placeholder="PHONE" required> </div>
+                                        <div class="col-12 col-md-6 email-field"><input type="text" name="phone" class="form-control" placeholder="PHONE" required> </div>
+                                        <div class="col-12 col-md-6 email-field"> <input type="text" name="city" class="form-control" placeholder="CITY" required> </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 email-field">
+                                            <select class="form-control" name="booktype" required>
+                                                <option value="hardcover">HARD COVER</option>
+                                                <option value="softcover">SOFT COVER</option>
+                                            </select>
+                                        </div>
                                         <div class="col-12 col-md-6 email-field"> <input type="number" min="1" max="50" name="bookQty" class="form-control" placeholder="BOOK QTY" required> </div>
                                     </div>
+                                    <br>
+                                    <!--<div class="row">
+                                        <div class="col-12 col-md-6 email-field">
+                                            <select class="form-control" name="booktype2">
+                                            <option value="none">NO SELECTION</option>
+                                            <option value="hardcover2">HARD COVER</option>
+                                            <option value="softcover2">SOFT COVER</option>
+                                          </select>
+                                        </div>
+                                        <div class="col-12 col-md-6 email-field"><input type="number" min="0" max="50" name="booktype2Qty" class="form-control" placeholder="BOOK QTY"> </div>
+                                    </div>-->
                                 </div>
-                                </div><button type="submit" class="btn btn-primary mb-3 d-block w-100"><span class="d-none d-md-block">Proceed to Checkout</span></button>
+                                <center></div><button type="submit" class="btn btn-primary mr-lg-4">Proceed to Checkout</button></center>
                             </form>
                         </div>
                     </div>

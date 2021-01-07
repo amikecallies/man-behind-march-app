@@ -11,6 +11,7 @@ $_SESSION['state']=$_POST['state'];
 $_SESSION['zipcode']=$_POST['zipcode'];
 $_SESSION['phone']=$_POST['phone'];
 $_SESSION['bookQty']=$_POST['bookQty'];
+$_SESSION['booktype']=$_POST['booktype'];
 
 header("Location: ../checkout.html");
 ?>
