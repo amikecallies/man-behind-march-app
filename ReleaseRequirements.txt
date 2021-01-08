@@ -1,15 +1,20 @@
 
+Priority List:
 
-The Author Bio!
+    The Author Bio! => Received so implement
 
-Add Facebook post comments in the Book Promotion Review Sections (before even reading!)
+    Remove the following secitons: Book Reviews, The Book Chapters
 
-The exact pricing for the soft and hard cover products
+    Consult with Dad and see if he'd like to add any other content or modify the following sections: Who is this book for?, What will you get from this book?
 
-Generate facebook link for Dad's profile
+    Consult with Dad and modify subtitle
 
-Ask if Dad want's chapter's displayed? If so get them. Preview chapters?
+    Implement social links in new tabs for users on onclick actions
 
-On other content placeholders?
+    Add Picture to site from Dad's email
+ 
+Add Facebook post comments in the Book Promotion Review Sections => NOT YET
+
+The exact pricing for the soft and hard cover products => NOT YET
 
 (Optional before release) Mobile Experience: Book Quanity Selector, the entire Checkout page
