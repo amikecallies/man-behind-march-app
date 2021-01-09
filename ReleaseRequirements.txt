@@ -1,12 +1,15 @@
-
 Priority List:
 
     The Author Bio! => Received so implement
 
-    Consult with Dad and see if he'd like to add any other content or modify the following sections: What will you get from this book?
+    Remove What will you get from this book?
 
-    Consult with Dad and modify subtitle
+    Remove social links
+
+    Wait for the subtitle
+
+    Wait photos
  
-Add Facebook post comments in the Book Promotion Review Sections => NOT YET
+    Wait for Facebook post comments in the Book Promotion Review Sections => NOT YET
 
 (Optional before release) Mobile Experience: the entire Checkout page
