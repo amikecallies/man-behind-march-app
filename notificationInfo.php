@@ -10,7 +10,8 @@ $_SESSION['city']=$_POST['city'];
 $_SESSION['state']=$_POST['state'];
 $_SESSION['zipcode']=$_POST['zipcode'];
 $_SESSION['phone']=$_POST['phone'];
-$_SESSION['bookQty']=$_POST['bookQty'];
+$_SESSION['hardBookQty']=$_POST['hardBookQty'];
+$_SESSION['paperbackBookQty']=$_POST['paperbackBookQty'];
 $_SESSION['booktype']=$_POST['booktype'];
 
 header("Location: ../checkout.html");

@@ -83,27 +83,13 @@
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-12 col-md-6 email-field">
-                                            <select class="form-control" name="booktype" required>
-                                                <option value="hardcover">HARD COVER</option>
-                                                <option value="softcover">SOFT COVER</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-12 col-md-6 email-field"> <input type="number" min="1" max="50" name="bookQty" class="form-control" placeholder="BOOK QTY" required> </div>
+                                        <div class="col-12 col-md-6 email-field"><input id="hardbookNum" type="number" min="0" max="50" name="hardBookQty" class="form-control" placeholder="BOOK QTY (HARD COVER)" required> </div>
+                                        <div class="col-12 col-md-6 email-field"><input id="paperbackNum" type="number" min="0" max="50" name="paperbackBookQty" class="form-control" placeholder="BOOK QTY (PAPERBACK)" required> </div>
                                     </div>
                                     <br>
-                                    <!--<div class="row">
-                                        <div class="col-12 col-md-6 email-field">
-                                            <select class="form-control" name="booktype2">
-                                            <option value="none">NO SELECTION</option>
-                                            <option value="hardcover2">HARD COVER</option>
-                                            <option value="softcover2">SOFT COVER</option>
-                                          </select>
-                                        </div>
-                                        <div class="col-12 col-md-6 email-field"><input type="number" min="0" max="50" name="booktype2Qty" class="form-control" placeholder="BOOK QTY"> </div>
-                                    </div>-->
+                                    </div><button id="submitButton" onclick="validateBookQty()" type="submit" class="btn btn-primary mr-lg-4">Proceed to Checkout</button>
                                 </div>
-                                <center></div><button type="submit" class="btn btn-primary mr-lg-4">Proceed to Checkout</button></center>
+                                
                             </form>
                         </div>
                     </div>
@@ -123,5 +109,22 @@
         <script src="assets/plugins/back-to-top.js"></script>
         <script src="assets/js/custom.js"></script>
         <script src="https://js.stripe.com/v3/"></script>
+        <script>
+            function validateBookQty() { 
+                var numHardBooks = document.getElementById("hardbookNum").value;
+                var numPaperbackBooks = document.getElementById("paperbackNum").value;
+                var submission = document.getElementById("submitButton");
+
+                
+                if (numHardBooks == '0' && numPaperbackBooks == '0')  {
+                    submission.setCustomValidity('You must at least purchase 1 book');
+                }
+                else {
+                    submission.setCustomValidity('');
+                }
+
+                return true;
+            } 
+        </script>
     </body>
     </html>

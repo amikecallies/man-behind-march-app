@@ -3,18 +3,10 @@ Priority List:
 
     The Author Bio! => Received so implement
 
-    Remove the following secitons: Book Reviews, The Book Chapters
-
-    Consult with Dad and see if he'd like to add any other content or modify the following sections: Who is this book for?, What will you get from this book?
+    Consult with Dad and see if he'd like to add any other content or modify the following sections: What will you get from this book?
 
     Consult with Dad and modify subtitle
-
-    Implement social links in new tabs for users on onclick actions
-
-    Add Picture to site from Dad's email
  
 Add Facebook post comments in the Book Promotion Review Sections => NOT YET
 
-The exact pricing for the soft and hard cover products => NOT YET
-
-(Optional before release) Mobile Experience: Book Quanity Selector, the entire Checkout page
+(Optional before release) Mobile Experience: the entire Checkout page
