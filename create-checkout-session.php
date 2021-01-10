@@ -7,8 +7,7 @@ session_start();
 
 header('Content-Type: application/json');
 
-$YOUR_DOMAIN = 'https://man-behind-march-app.herokuapp.com'; // Production: https://manbehindthemarch.com
-
+$YOUR_DOMAIN = 'https://www.manbehindthemarch.com/';
 $o_fullName=$_SESSION['fullName'];
 $o_email=$_SESSION['email'];
 $o_country=$_SESSION['country'];
