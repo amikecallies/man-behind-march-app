@@ -937,6 +937,24 @@ path {
     font-size: 15px;
 }
 
+/* Photo Gallery Section
+================================================== */
+
+.box-gallery {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 10px; }
+
+.gutter-5 {
+    margin-right: 0;
+    margin-left: 0; }
+
+.center-gallery {
+    text-align: center;
+    }
+
+
 /* Author Section
 ================================================== */
 

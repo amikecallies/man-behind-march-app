@@ -1,10 +1,6 @@
 Priority List:
 
-    The Author Bio! => Received so implement
-
-    Remove What will you get from this book?
-
-    Remove social links
+    Wait for Author Bio
 
     Wait for the subtitle
 
