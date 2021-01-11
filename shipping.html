@@ -119,6 +119,12 @@
                 if (numHardBooks == '0' && numPaperbackBooks == '0' || numHardBooks == '' && numPaperbackBooks == '')  {
                     submission.setCustomValidity('You must at least purchase 1 book');
                 }
+                if(numHardBooks == '') {
+                    numHardBooks = '0';
+                }
+                if(numPaperbackBooks == '') {
+                    numPaperbackBooks = '0';
+                }
                 else {
                     submission.setCustomValidity('');
                 }

@@ -182,5 +182,4 @@ else {
 // Move next two lines within if-else conditions
 echo json_encode(['id' => $checkout_session->id]);
 sendMsgSeller($o_fullName, $o_email, $o_country, $o_address, $o_suite, $o_city, $o_state, $o_zipcdoe, $o_phone, $o_hardBookQty, $o_paperbackBookQty);
-session_destroy();
 ?>
