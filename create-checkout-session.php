@@ -102,6 +102,14 @@ function sendMsgSeller($o_fullName, $o_email, $o_country, $o_address, $o_suite, 
   }
 }
 
+if($o_hardBookQty == '') {
+  $o_hardBookQty = 0;
+}
+
+if($o_paperbackBookQty == '') {
+  $o_paperbackBookQty = 0;
+}
+
 if($o_hardBookQty > 0 && $o_paperbackBookQty > 0) {
 
   $checkout_session = \Stripe\Checkout\Session::create([
