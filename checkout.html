@@ -18,6 +18,8 @@
 	<!-- CSS Skin File -->
   <link rel="stylesheet" href="assets/css/skins/red.css">
   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
   </head>
   <body>
     <section>
@@ -35,11 +37,15 @@
           <div class="text-center">
             <button class="btn btn-primary" id="checkout-button">Checkout</button>
           </div>
-		    </div>
+        </div>
 
-        <br>
-        <br>
-        <br>
+        <div id="non-loader"><br><br><br><br><br><br><br><br><br></div>
+        
+        <div id="loader" class="loader-container">
+          <div class="loader"></div>
+          <div class="loader"></div>
+          <div class="loader"></div>
+        </div>
         
         <div class="text-center mb-5">
 			    <img class="author-pic" src="assets/images/book_cover-checkout.jpg" alt="image">
@@ -47,6 +53,17 @@
     </section>
   </body>
   
+  <script>
+    $(document).ready(function(){
+      $("#loader").hide();
+
+      $("#checkout-button").click(function(){
+        $("#loader").show();
+        $("#non-loader").hide();
+      });
+    });
+   </script>
+
   <script type="text/javascript">
     // Create an instance of the Stripe object with your publishable API key
     var stripe = Stripe("pk_live_51HwHJ6LnR6D9WXz8SqtQRkTFWtEfyb8mNhztirLOqtZdf1A2Pj0J7nFcy70V3TJ3HLzGO9z8oMhk0FD460HLVTmz00y9ji3lns");

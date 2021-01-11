@@ -2,4 +2,4 @@ Priority List:
  
 Wait for Facebook post comments in the Book Promotion Review Sections => NOT YET
 
-(Optional before release) Mobile Experience: the entire Checkout page, Book Cover on landing page
+(Optional before release) Mobile Experience: Book Cover on landing page
