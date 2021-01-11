@@ -1,11 +1,5 @@
 Priority List:
-
-    Wait for Author Bio
-
-    Wait for the subtitle
-
-    Wait photos
  
-    Wait for Facebook post comments in the Book Promotion Review Sections => NOT YET
+Wait for Facebook post comments in the Book Promotion Review Sections => NOT YET
 
-(Optional before release) Mobile Experience: the entire Checkout page
+(Optional before release) Mobile Experience: the entire Checkout page, Book Cover on landing page

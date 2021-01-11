@@ -83,8 +83,8 @@
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-12 col-md-6 email-field"><input id="hardbookNum" type="number" min="0" max="50" name="hardBookQty" class="form-control" placeholder="BOOK QTY (HARD COVER)" required> </div>
-                                        <div class="col-12 col-md-6 email-field"><input id="paperbackNum" type="number" min="0" max="50" name="paperbackBookQty" class="form-control" placeholder="BOOK QTY (PAPERBACK)" required> </div>
+                                        <div class="col-12 col-md-6 email-field"><input id="hardbookNum" type="number" min="0" max="50" name="hardBookQty" class="form-control" placeholder="BOOK QTY (HARD COVER)"> </div>
+                                        <div class="col-12 col-md-6 email-field"><input id="paperbackNum" type="number" min="0" max="50" name="paperbackBookQty" class="form-control" placeholder="BOOK QTY (PAPERBACK)"> </div>
                                     </div>
                                     <br>
                                     </div><button id="submitButton" onclick="validateBookQty()" type="submit" class="btn btn-primary mr-lg-4">Proceed to Checkout</button>
@@ -116,7 +116,7 @@
                 var submission = document.getElementById("submitButton");
 
                 
-                if (numHardBooks == '0' && numPaperbackBooks == '0')  {
+                if (numHardBooks == '0' && numPaperbackBooks == '0' || numHardBooks == '' && numPaperbackBooks == '')  {
                     submission.setCustomValidity('You must at least purchase 1 book');
                 }
                 else {
