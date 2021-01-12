@@ -937,24 +937,6 @@ path {
     font-size: 15px;
 }
 
-/* Photo Gallery Section
-================================================== */
-
-.box-gallery {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    margin-bottom: 10px; }
-
-.gutter-5 {
-    margin-right: 0;
-    margin-left: 0; }
-
-.center-gallery {
-    text-align: center;
-    }
-
-
 /* Author Section
 ================================================== */
 
@@ -1147,3 +1129,24 @@ path {
   50%  { top: 30px;  opacity: .2; }
   100% { top: 0;     opacity: 1; }
 }
+
+/* Photo Gallery Section
+================================================== */
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .column-photo-gallery {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row-photo-gallery::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

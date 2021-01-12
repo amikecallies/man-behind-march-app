@@ -1,5 +1,5 @@
 ##Force SSL 
-##Reference: 
+##Reference: https://blog.jcore.com/2017/01/forcing-https-with-an-htaccess-file-on-heroku/
 
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
