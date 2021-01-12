@@ -1,7 +1,9 @@
 Priority List:
 
-Add Google Analytics!
- 
-Wait for Facebook post comments in the Book Promotion Review Sections => NOT YET
+Change format of photo gallery
 
-(Optional before release) Mobile Experience: Book Cover on landing page
+Book Cover on landing page
+ 
+Wait for Facebook post comments in the Book Promotion Review Sections
+
+

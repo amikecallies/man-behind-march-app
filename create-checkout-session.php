@@ -78,7 +78,7 @@ function sendMsgSeller($o_fullName, $o_email, $o_country, $o_address, $o_suite, 
   <li>Number of Hard Cover Books: ".$o_hardBookQty."</li>
   <li>Number of Paperback Books: ".$o_paperbackBookQty."</li>
   </ol>
-  <b>Please deliver this order to ".$o_fullName." at your earliest convenience.</b>";
+  <b>Please verify that ".$o_fullName." has submitted payment BEFORE you process this order at your earliest convenience.</b>";
 
   // Tells PHPMailer to use SMTP authentication
   $mail->SMTPAuth = true;
@@ -187,7 +187,6 @@ else {
   ]);
 }
 
-// Move next two lines within if-else conditions
 echo json_encode(['id' => $checkout_session->id]);
 sendMsgSeller($o_fullName, $o_email, $o_country, $o_address, $o_suite, $o_city, $o_state, $o_zipcdoe, $o_phone, $o_hardBookQty, $o_paperbackBookQty);
 ?>
