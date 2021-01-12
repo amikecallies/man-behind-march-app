@@ -1,5 +1,10 @@
-RewriteEngine On
+##Force SSL 
 
-RewriteCond %{HTTPS} off
+#Normal way (in case you need to deploy to NON-heroku)
+RewriteCond %{HTTPS} !=on
 
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+#Heroku way
+RewriteCond %{HTTP:X-Forwarded-Proto} !https 
+
+#If neither above conditions are met, redirect to https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
