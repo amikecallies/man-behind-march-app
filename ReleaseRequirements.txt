@@ -1,7 +1,5 @@
 Priority List:
 
-Change format of photo gallery
-
 Book Cover on landing page
  
 Wait for Facebook post comments in the Book Promotion Review Sections
