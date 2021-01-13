@@ -4,4 +4,6 @@ Book Cover on landing page
  
 Wait for Facebook post comments in the Book Promotion Review Sections
 
+Add Copyright license (follow documentation)
+
 
