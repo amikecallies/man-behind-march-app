@@ -4,8 +4,6 @@ Wait for Facebook post comments in the Book Promotion Review Sections
 
 Create custom requested title style (requirements in email)
 
-Add Copyright license (follow documentation)
-
 Markell's suggestions
 
     https://www.facebook.com/business/learn/facebook-ads-pixel

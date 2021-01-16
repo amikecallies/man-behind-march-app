@@ -774,7 +774,7 @@ path {
 .hero-section .subheadline {
     font-size: 1.25rem;
     color:#eee;
-    -webkit-text-stroke: 0.3px black;
+    -webkit-text-stroke: 0.1px black;
 }
 
 .hero-section .btn-primary {
