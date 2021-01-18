@@ -43,7 +43,7 @@ function sendMsgSeller($o_fullName, $o_email, $o_country, $o_address, $o_suite, 
 
 
   //$mail->addAddress('amcallies2018@gmail.com', 'Adrian Callies'); //Use this email only for testing this feature
-  $mail->addAddress('Arcallies@aol.com', 'Arlington Callies');
+  $mail->addAddress('manbehindmarch@gmail.com', 'Arlington Callies');
 
   // Replace smtp_username with your Amazon SES SMTP user name.
   $mail->Username = 'AKIA4HJMF54KR6RMZO7G';
