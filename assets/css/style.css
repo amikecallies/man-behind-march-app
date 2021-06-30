@@ -948,10 +948,8 @@ path {
 }
 
 .author-section .author-pic {
-    width: 30%;
-    height: 30%;
-    /*border: 3px solid rgba(0,0,0,0.2);
-    border-radius: 50%;*/
+    width: 50%;
+    height: 50%;
 }
 
 .author-section .social-list li {
