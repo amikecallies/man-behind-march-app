@@ -3,7 +3,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 session_start();
-\Stripe\Stripe::setApiKey('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'); // Secret Key
+\Stripe\Stripe::setApiKey('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');
 
 header('Content-Type: application/json');
 
