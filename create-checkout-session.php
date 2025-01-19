@@ -7,8 +7,8 @@ require 'vendor/autoload.php';
 session_start();
 
 $stripeSecret = getenv('STRIPE_SECRET');
-$amazonSesUserName = getenv('AMAZON_SES_SMTP_USERNAME');
-$amazonSesPassword = getenv('AMAZON_SES_SMTP_PASSWORD');
+// $amazonSesUserName = getenv('AMAZON_SES_SMTP_USERNAME');
+// $amazonSesPassword = getenv('AMAZON_SES_SMTP_PASSWORD');
 
 \Stripe\Stripe::setApiKey($stripeSecret);
 
@@ -53,10 +53,10 @@ function sendMsgSeller($o_fullName, $o_email, $o_country, $o_address, $o_suite, 
   $mail->addAddress('manbehindmarch@gmail.com', 'Arlington Callies');
 
   // Replace smtp_username with your Amazon SES SMTP user name.
-  $mail->Username = $amazonSesUserName;
+  $mail->Username = 'AKIA4HJMF54KR6RMZO7G';
 
   // Replace smtp_password with your Amazon SES SMTP password.
-  $mail->Password = $amazonSesPassword;
+  $mail->Password = 'BIaPiubigPTFVZS6+vl90lygXYC4pn8XrkT++DfgaSkI';
       
   // Specify a configuration set. If you do not want to use a configuration
   // set, comment or remove the next line.
