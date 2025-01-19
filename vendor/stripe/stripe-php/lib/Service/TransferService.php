@@ -16,7 +16,7 @@ class TransferService extends \Stripe\Service\AbstractService
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\Collection<\Stripe\Transfer>
+     * @return \Stripe\Collection
      */
     public function all($params = null, $opts = null)
     {
@@ -36,7 +36,7 @@ class TransferService extends \Stripe\Service\AbstractService
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\Collection<\Stripe\TransferReversal>
+     * @return \Stripe\Collection
      */
     public function allReversals($parentId, $params = null, $opts = null)
     {

@@ -14,7 +14,7 @@ class ApplePayDomainService extends \Stripe\Service\AbstractService
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\Collection<\Stripe\ApplePayDomain>
+     * @return \Stripe\Collection
      */
     public function all($params = null, $opts = null)
     {

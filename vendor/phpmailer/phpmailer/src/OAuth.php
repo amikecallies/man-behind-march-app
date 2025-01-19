@@ -33,7 +33,7 @@ use League\OAuth2\Client\Token\AccessToken;
  *
  * @author  Marcus Bointon (Synchro/coolbru) <phpmailer@synchromedia.co.uk>
  */
-class OAuth implements OAuthTokenProvider
+class OAuth
 {
     /**
      * An instance of the League OAuth Client Provider.
@@ -123,7 +123,7 @@ class OAuth implements OAuthTokenProvider
      */
     public function getOauth64()
     {
-        //Get a new token if it's not available or has expired
+        // Get a new token if it's not available or has expired
         if (null === $this->oauthToken || $this->oauthToken->hasExpired()) {
             $this->oauthToken = $this->getToken();
         }

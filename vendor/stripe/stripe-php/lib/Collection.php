@@ -5,13 +5,10 @@ namespace Stripe;
 /**
  * Class Collection.
  *
- * @template TStripeObject of StripeObject
- * @template-implements \IteratorAggregate<TStripeObject>
- *
  * @property string $object
  * @property string $url
  * @property bool $has_more
- * @property TStripeObject[] $data
+ * @property \Stripe\StripeObject[] $data
  */
 class Collection extends StripeObject implements \Countable, \IteratorAggregate
 {
@@ -50,7 +47,6 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
         $this->filters = $filters;
     }
 
-    #[\ReturnTypeWillChange]
     public function offsetGet($k)
     {
         if (\is_string($k)) {
@@ -64,14 +60,6 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
         throw new Exception\InvalidArgumentException($msg);
     }
 
-    /**
-     * @param null|array $params
-     * @param null|array|string $opts
-     *
-     * @throws Exception\ApiErrorException
-     *
-     * @return Collection<TStripeObject>
-     */
     public function all($params = null, $opts = null)
     {
         self::_validateParams($params);
@@ -89,14 +77,6 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
         return $obj;
     }
 
-    /**
-     * @param null|array $params
-     * @param null|array|string $opts
-     *
-     * @throws Exception\ApiErrorException
-     *
-     * @return TStripeObject
-     */
     public function create($params = null, $opts = null)
     {
         self::_validateParams($params);
@@ -107,15 +87,6 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
         return Util\Util::convertToStripeObject($response, $opts);
     }
 
-    /**
-     * @param string $id
-     * @param null|array $params
-     * @param null|array|string $opts
-     *
-     * @throws Exception\ApiErrorException
-     *
-     * @return TStripeObject
-     */
     public function retrieve($id, $params = null, $opts = null)
     {
         self::_validateParams($params);
@@ -136,7 +107,6 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
     /**
      * @return int the number of objects in the current page
      */
-    #[\ReturnTypeWillChange]
     public function count()
     {
         return \count($this->data);
@@ -146,7 +116,6 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
      * @return \ArrayIterator an iterator that can be used to iterate
      *    across objects in the current page
      */
-    #[\ReturnTypeWillChange]
     public function getIterator()
     {
         return new \ArrayIterator($this->data);
@@ -162,7 +131,7 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
     }
 
     /**
-     * @return \Generator|TStripeObject[] A generator that can be used to
+     * @return \Generator|StripeObject[] A generator that can be used to
      *    iterate across all objects across all pages. As page boundaries are
      *    encountered, the next page will be fetched automatically for
      *    continued iteration.
@@ -225,7 +194,7 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
      * @param null|array $params
      * @param null|array|string $opts
      *
-     * @return Collection<TStripeObject>
+     * @return Collection
      */
     public function nextPage($params = null, $opts = null)
     {
@@ -253,7 +222,7 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
      * @param null|array $params
      * @param null|array|string $opts
      *
-     * @return Collection<TStripeObject>
+     * @return Collection
      */
     public function previousPage($params = null, $opts = null)
     {
@@ -275,7 +244,7 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
     /**
      * Gets the first item from the current page. Returns `null` if the current page is empty.
      *
-     * @return null|TStripeObject
+     * @return null|\Stripe\StripeObject
      */
     public function first()
     {
@@ -285,7 +254,7 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
     /**
      * Gets the last item from the current page. Returns `null` if the current page is empty.
      *
-     * @return null|TStripeObject
+     * @return null|\Stripe\StripeObject
      */
     public function last()
     {

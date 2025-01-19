@@ -15,7 +15,7 @@ class ApplicationFeeService extends \Stripe\Service\AbstractService
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\Collection<\Stripe\ApplicationFee>
+     * @return \Stripe\Collection
      */
     public function all($params = null, $opts = null)
     {
@@ -35,7 +35,7 @@ class ApplicationFeeService extends \Stripe\Service\AbstractService
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\Collection<\Stripe\ApplicationFeeRefund>
+     * @return \Stripe\Collection
      */
     public function allRefunds($parentId, $params = null, $opts = null)
     {
