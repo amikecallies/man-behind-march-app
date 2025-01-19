@@ -6,19 +6,11 @@ require 'vendor/autoload.php';
 
 session_start();
 
-// $stripeSecret = getenv('STRIPE_SECRET');
+$stripeSecret = getenv('STRIPE_SECRET');
 // $amazonSesUserName = getenv('AMAZON_SES_SMTP_USERNAME');
 // $amazonSesPassword = getenv('AMAZON_SES_SMTP_PASSWORD');
 
-$secretKey = getenv('STRIPE_SECRET_KEY');
-
-if ($stripeSecret) {
-    echo "Secret Key: " . $stripeSecret . "\n";
-} else {
-    echo "Secret Key not found.\n";
-}
-
-\Stripe\Stripe::setApiKey('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');
+\Stripe\Stripe::setApiKey($stripeSecret);
 
 header('Content-Type: application/json');
 
