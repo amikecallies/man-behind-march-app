@@ -50,10 +50,10 @@ function sendMsgSeller($o_fullName, $o_email, $o_country, $o_address, $o_suite, 
   $mail->addAddress('manbehindmarch@gmail.com', 'Arlington Callies');
 
   // Replace smtp_username with your Amazon SES SMTP user name.
-  $mail->Username = 'AKIA4HJMF54KYXMQUWNV';
+  $mail->Username = getenv('AMAZON_USER');
 
   // Replace smtp_password with your Amazon SES SMTP password.
-  $mail->Password = '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';
+  $mail->Password = getenv('AMAZON_PASSWORD');
       
   // Specify a configuration set. If you do not want to use a configuration
   // set, comment or remove the next line.
