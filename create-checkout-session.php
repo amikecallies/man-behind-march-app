@@ -50,10 +50,10 @@ function sendMsgSeller($o_fullName, $o_email, $o_country, $o_address, $o_suite, 
   $mail->addAddress('manbehindmarch@gmail.com', 'Arlington Callies');
 
   // Replace smtp_username with your Amazon SES SMTP user name.
-  $mail->Username = getenv('AMAZON_USER');
+  $mail->Username = 'AKIA4HJMF54KYXMQUWNV';
 
   // Replace smtp_password with your Amazon SES SMTP password.
-  $mail->Password = getenv('AMAZON_PASSWORD');
+  $mail->Password = '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';
       
   // Specify a configuration set. If you do not want to use a configuration
   // set, comment or remove the next line.
@@ -192,5 +192,5 @@ else {
 }
 
 echo json_encode(['id' => $checkout_session->id]);
-sendMsgSeller($o_fullName, $o_email, $o_country, $o_address, $o_suite, $o_city, $o_state, $o_zipcdoe, $o_phone, $o_hardBookQty, $o_paperbackBookQty);
+//sendMsgSeller($o_fullName, $o_email, $o_country, $o_address, $o_suite, $o_city, $o_state, $o_zipcdoe, $o_phone, $o_hardBookQty, $o_paperbackBookQty);
 ?>
